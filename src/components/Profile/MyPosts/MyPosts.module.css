@@ -1,5 +1,28 @@
 
+.all {
+  background-color: aqua;
+  padding: 10px 10px;
+}
 
-  .item {
-    color: black;
-  }
+.textarea{
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+
+.button{
+  background-color: blueviolet;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.newpost{
+  margin-top: 10px;
+}
+
+.posts{
+  margin-top: 5px;
+}
+  
+
+  

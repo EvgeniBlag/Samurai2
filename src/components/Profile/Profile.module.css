@@ -1,9 +1,7 @@
-.profile img {
-    width: 1100px;
-    height: 400px;
-  }
-  
   .profile{
    grid-area: content;
-  background-color: yellowgreen;
+  }
+  .profileimg{
+    width: 1000px;
+    height: 600px;
   }
