@@ -8,7 +8,7 @@ const MyPosts = () =>{
     return ( 
      
       <div className={s.all}>
-        Ava + description
+       <h3>Ava + description</h3> 
         <div>
           My posts
           <div className={s.textarea}>

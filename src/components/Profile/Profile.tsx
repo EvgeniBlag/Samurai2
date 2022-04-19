@@ -1,19 +1,16 @@
 import React from 'react';
 import MyPosts from './MyPosts/MyPosts';
-import s from  './Profile.module.css'
+import { ProfileInfo } from './ProfileInfo/ProfileInfo';
+
 
 
 const Profile = () =>{
-    return <div className={s.content}> 
+    return (
       <div>
-        <img className={s.profileimg} src='https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image.jpeg' alt='image' />
+        <ProfileInfo />
+        <MyPosts />
       </div>
-
-      <MyPosts />
-
-
-
-    </div>
+    ) 
     
 }
 
