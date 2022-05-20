@@ -41,6 +41,17 @@ export const Dialogs = (props:DialogsPropsType) => {
         { id: 6, name: "Valera" }
     
     ]
+
+    const messagesData = [
+
+        { id: 1, message: "Hi" },
+        { id: 2, message: "How is yuor it-kamasutra" },
+        { id: 3, message: "Yo" },
+        { id: 4, name: "Show me the money" },
+        { id: 5, name: "School of seven bels" },
+        { id: 6, name: "Kiss them for me" }
+    
+    ]
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
