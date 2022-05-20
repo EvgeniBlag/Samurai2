@@ -16,6 +16,7 @@ type addMessagePropsType = {
     <div className={s.like}>
         <span className={s.likelike}>Like</span>
         <span>{props.like}</span>
+        <hr/>
     </div>
   </div>
   )
