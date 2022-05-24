@@ -31,7 +31,16 @@ export type postsType = {
     message:string
   }
   
+export type StateType = {
+    posts: Array<postsType>
+    dialogs: Array<itemsDialogsType>
+    messages: Array<itemsMessagesPropsType>
+}
 
+
+export type  MessagePropsType = {
+    message:string
+}
 
 const state = {
     posts: [
@@ -48,13 +57,15 @@ const state = {
         { id: 4, name: "Sasha" },
         { id: 5, name: "Victor" },
         { id: 6, name: "Valera" }
-      ],
-      messages : [
+    ],
+    messages : [
         { id: 1, message: "Hi its me" },
         { id: 2, message: "How is yuor it-kamasutra" },
         { id: 3, message: "Yo" },
         { id: 4, message: "Show me the money" },
         { id: 5, message: "School of seven bels" },
         { id: 6, message: "Kiss them for me" }
-      ]
+    ]
 }
+
+export default state;
