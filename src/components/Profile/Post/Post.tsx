@@ -6,7 +6,7 @@ type addMessagePropsType = {
   like:number
 }
 
-  const Post = (props:addMessagePropsType) =>{
+ export const Post = (props:addMessagePropsType) =>{
   return (
     <div className={s.item}>
     <img src="https://pbs.twimg.com/media/ErEByifXEAATxzC.jpg" alt="2-d"/>
@@ -22,4 +22,3 @@ type addMessagePropsType = {
   )
 }
 
-export default Post

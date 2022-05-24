@@ -1,57 +1,53 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from './Dialogs.module.css'
-
-type DialogsPropsType ={
-    name:string
-    id:number
-}
-type MessagePropsType={
-    message:string
-}
-
-const DialogItem = (props:DialogsPropsType)=>{
-    let path = "/dialogs/" + props.id;
-    return(
-        <div className={s.dialog +' '+ s.active}>
-        <NavLink to={path}>{props.name}</NavLink>
-    </div>
-    )
-  }
-  const Message = (props:MessagePropsType) =>{
-      return(
-        <div className={s.message}>{props.message}</div>
-      )
-  }
+import s from './Dialogs.module.css';
+import {DialogItem} from "./DialogItem/DialogItem"
+import {Message} from "./Message/Message"
+import {DialosPropsType} from "./../../index"
+import {MessagesPropsType} from "./../../index";
 
 
-export const Dialogs = (props:DialogsPropsType) => {
+// type DialosPropsType = {
+//     id:number,
+//     name:string
+// }
 
-    const dialogs = [
+// type MessagesPropsType = {
+//     id:number,
+//     name:string
+// }
 
-        { id: 1, name: "Dimych" },
-        { id: 2, name: "Andrew" },
-        { id: 3, name: "Svetlana" },
-        { id: 4, name: "Sasha" },
-        { id: 5, name: "Victor" },
-        { id: 6, name: "Valera" }
+
+type DialogMessagePropsType =  DialosPropsType & MessagesPropsType
+
+
+export const Dialogs = (props:DialogMessagePropsType) => {
+
+    // const dialogs = [
+
+    //     { id: 1, name: "Dimych" },
+    //     { id: 2, name: "Andrew" },
+    //     { id: 3, name: "Svetlana" },
+    //     { id: 4, name: "Sasha" },
+    //     { id: 5, name: "Victor" },
+    //     { id: 6, name: "Valera" }
     
-    ]
-    const messages = [
-        { id: 1, message: "Hi its me" },
-        { id: 2, message: "How is yuor it-kamasutra" },
-        { id: 3, message: "Yo" },
-        { id: 4, message: "Show me the money" },
-        { id: 5, message: "School of seven bels" },
-        { id: 6, message: "Kiss them for me" }
-    ]
+    // ]
+    // const messages = [
+    //     { id: 1, message: "Hi its me" },
+    //     { id: 2, message: "How is yuor it-kamasutra" },
+    //     { id: 3, message: "Yo" },
+    //     { id: 4, message: "Show me the money" },
+    //     { id: 5, message: "School of seven bels" },
+    //     { id: 6, message: "Kiss them for me" }
+    // ]
 
-    let dialogsElements = dialogs.map(d => {
+    let dialogsElements = props.dialogs.map(d => {
         return <DialogItem name={d.name} id={d.id} />
     })
 
-    let messagesElement = messages.map(m => {
+    let messagesElement = props.messages.map(m => {
         return <Message message={m.message} />
     })
 

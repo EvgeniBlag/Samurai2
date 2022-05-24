@@ -1,20 +1,18 @@
 import React from 'react';
 import s from './MyPosts.module.css'
-import Post from '../Post/Post';
+import {Post} from '../Post/Post';
+import {MyPostsPropsType} from "../../../index"
 
 
 
-const MyPosts = () => {
 
-  const posts = [
-    { id: 1, message: "Hi its me", likesCount: 12 },
-    { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
-    { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
-    { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
-    { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
-  ]
+   
 
-  let postsElement = posts.map(p => <Post message={p.message} like={p.likesCount} />)
+export const MyPosts = (props:MyPostsPropsType) => {
+
+
+
+  let postsElement = props.posts.map(p => <Post message={p.message} like={p.likesCount} />)
 
   return (
 
@@ -43,4 +41,3 @@ const MyPosts = () => {
   )
 }       
 
-export default MyPosts
