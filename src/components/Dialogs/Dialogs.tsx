@@ -1,5 +1,5 @@
 
-import React from "react";
+import React,{useRef} from "react";
 import { NavLink } from "react-router-dom";
 import s from './Dialogs.module.css';
 import {DialogItem} from "./DialogItem/DialogItem"
@@ -30,17 +30,33 @@ export const Dialogs = (props:MyDialogsProps) => {
         return <Message message={m.message} />
     })
 
+    
+
+    let newMessage = useRef <null|HTMLTextAreaElement>(null)
+
+   
+
+    const addMessage = () => {
+        let newText = newMessage.current?.value;
+        alert(newText)
+    }
+
 
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
 
-               {dialogsElements}
+                {dialogsElements}
+
+
+                <textarea className={s.textarrea} ref={newMessage} ></textarea>
+
+                <button className={s.button} onClick={addMessage} >addMessage</button>
 
             </div>
 
             <div className={s.messages}>
-              {messagesElement}
+                {messagesElement}
             </div>
 
         </div>

@@ -32,7 +32,10 @@ export type postsType = {
   }
   
 export type StateType = {
-    posts: Array<postsType>
+    profilePage:{
+        posts: Array<postsType>
+    }
+
     dialogs: Array<itemsDialogsType>
     messages: Array<itemsMessagesPropsType>
 }
@@ -42,14 +45,23 @@ export type  MessagePropsType = {
     message:string
 }
 
-const state = {
+export type profilePageType = {
+     posts: Array<postsType>
+}
+
+
+
+
+const state: StateType = {
+  profilePage:{
     posts: [
         { id: 1, message: "Hi its me", likesCount: 12 },
         { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
         { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
         { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
         { id: 2, message: "How is yuor it-kamasutra", likesCount: 15 },
-    ],
+    ]
+  },
     dialogs : [
         { id: 1, name: "Dimych" },
         { id: 2, name: "Andrew" },
@@ -66,6 +78,15 @@ const state = {
         { id: 5, message: "School of seven bels" },
         { id: 6, message: "Kiss them for me" }
     ]
+}
+
+export let addPost = (postMessage: string)=>{
+    let newPost = {
+        id:5,
+        message:postMessage,
+        likesCount:0
+    };
+    state.profilePage.posts.push(newPost);
 }
 
 export default state;

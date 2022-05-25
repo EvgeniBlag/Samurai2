@@ -14,4 +14,17 @@
 .messages {
     padding: 20px;
 }
+.button{
+    background-color: red;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .textarrea{
+      margin-top: 15px;
+      display:flex;
+      justify-content:flex-end;
+      align-items: flex-end;
+    
+  }
 
