@@ -1,4 +1,5 @@
 import React from "react";
+import { rerenderEntireTree } from "../render";
 
 
 export type MyPostsPropsType = {
@@ -87,6 +88,7 @@ export let addPost = (postMessage: string)=>{
         likesCount:0
     };
     state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state);
 }
 
 export default state;
